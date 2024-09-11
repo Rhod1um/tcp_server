@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 from socket import *
-import os
 from datetime import datetime
 from wsgiref.handlers import format_date_time
 from time import mktime
@@ -10,49 +9,58 @@ now = datetime.now()
 def formatted_date():
    return format_date_time(mktime(now.timetuple()))
 
-with open('not-found.html', 'r') as file:
-    data_not_found = file.read()
+try:
+    with open('not-found.html', 'r') as file:
+        not_found = file.read()
+except FileNotFoundError:
+    not_found = "<html><body><h1>File not found on the server</h1></body></html>"
 
-with open('index.html', 'r') as file:
-    index = file.read()
+try:
+    with open('index.html', 'r') as file:
+        index = file.read()
+except FileNotFoundError:
+    index = "<html><body><h1>File not found on the server</h1></body></html>"
 
-with open('login.html', 'r') as file:
-    login = file.read()
+try:
+    with open('login.html', 'r') as file:
+        login = file.read()
+except FileNotFoundError:
+    login = "<html><body><h1>File not found on the server</h1></body></html>"
 
 index = f"HTTP/1.1 200 OK\r\n" \
                 f"Date: {formatted_date()}\r\n" \
-                f"Server: MyServer/1.0\r\n" \
+                f"Server: localhost\r\n" \
                 f"Accept-Ranges: bytes\r\n" \
                 f"Content-Length: {len(index.encode())}\r\n" \
-                f"Keep-Alive: timeout=10, max=100\r\n" \
+                f"Keep-Alive: timeout=5, max=100\r\n" \
                 f"Connection: Keep-Alive\r\n" \
                 f"Content-Type: text/html; charset=iso-8859-1\r\n\r\n" \
                 f"{index}"
 
 login = f"HTTP/1.1 200 OK\r\n" \
                 f"Date: {formatted_date()}\r\n" \
-                f"Server: MyServer/1.0\r\n" \
+                f"Server: localhost\r\n" \
                 f"Accept-Ranges: bytes\r\n" \
                 f"Content-Length: {len(login.encode())}\r\n" \
-                f"Keep-Alive: timeout=10, max=100\r\n" \
+                f"Keep-Alive: timeout=5, max=100\r\n" \
                 f"Connection: Keep-Alive\r\n" \
                 f"Content-Type: text/html; charset=iso-8859-1\r\n\r\n" \
                 f"{login}"
 
-http_404 = f"HTTP/1.1 404 NOT FOUND\r\n" \
-                f"Server: MyServer/1.0\r\n" \
-                f"Content-Length: {len(data_not_found.encode())}\r\n" \
-                f"Content-Type: text/html; charset=iso-8859-1\r\n\r\n" \
+not_found = f"HTTP/1.1 404 NOT FOUND\r\n" \
+                f"Server: localhost\r\n" \
+                f"Content-Length: {len(not_found.encode())}\r\n" \
                 f"Connection: close\r\n" \
-                f"{data_not_found}"
+                f"Content-Type: text/html; charset=iso-8859-1\r\n\r\n" \
+                f"{not_found}"
 
 bad_request = f"HTTP/1.1 400 BAD REQUEST\r\n" \
-                f"Server: MyServer/1.0\r\n" \
+                f"Server: localhost\r\n" \
                 f"Content-Length: 0\r\n" \
                 f"Connection: close\r\n" \
 
 method_not_allowed = f"HTTP/1.1 405 METHOD NOT ALLOWED\r\n" \
-                f"Server: MyServer/1.0\r\n" \
+                f"Server: localhost\r\n" \
                 f"Content-Length: 0\r\n" \
                 f"Connection: close\r\n" \
                 
@@ -76,11 +84,17 @@ def is_bad_request(req):
 
     return False
 
-def log_request(req):
+def log_request(req, client_ip, status_code, response_size):
+    lines = req.split('\r\n')
+    request_line = lines[0]
+    now = datetime.now().strftime('%d/%b/%Y:%H:%M:%S %z')
+    log_entry = f'{client_ip} - - [{now} +0100] "{request_line}" {status_code} {response_size}\n'
     with open('request.log', 'a') as file:
-        file.write(req)
+        file.write(log_entry)
 
-server_port = 12003
+# apache format: 10.0.0.153 - - [08/Mar/2004:10:48:06 -0800] "GET /cgi-bin/mailgraph.cgi/mailgraph_0.png HTTP/1.1" 200 7970
+
+server_port = 8088
 server_socket = socket(AF_INET, SOCK_STREAM)
 server_socket.bind(('', server_port))
 server_socket.listen(1)
@@ -90,46 +104,32 @@ while True:
     conn_socket, client_address = server_socket.accept()
     req = conn_socket.recv(2048).decode()
     print(f"Request received from {client_address[0]}, {client_address[1]}: \n{req}")
-    log_request(req)
 
     req_ls = req.split()
     method, path = req_ls[0], req_ls[1]
 
     if method != "GET":
+        log_request(req, client_address, 400, len(not_found.encode()))
         conn_socket.send(method_not_allowed.encode())
-        conn_socket.close()
         continue
     
     if is_bad_request(req):
+        log_request(req, client_address[0], 405, len(bad_request.encode()))
         conn_socket.send(bad_request.encode())
-        conn_socket.close()
         continue
 
     if path != "/" and path != "/login":
-        conn_socket.send(http_404.encode())
+        log_request(req, client_address[0], 404, len(not_found.encode()))
+        conn_socket.send(not_found.encode())
+        continue
     elif path == "/":
+        log_request(req, client_address[0], 200, len(index.encode()))
         conn_socket.send(index.encode())
+        continue
     elif path == "/login":
+        log_request(req, client_address[0], 200, len(login.encode()))
         conn_socket.send(login.encode())
-    
-    """
-    #req_ls = req.split()
-    #print(req_ls)
-
-    #if req_ls[1] == "/":
-    #    is_root_path = True
-
-    #filepath = req_ls[1].replace("/","")
-    
-    #filepath = filepath.replace("/","")
-
-    if not os.path.isfile(filepath) and not is_root_path:
-        conn_socket.send(http_404.encode())
-    elif is_root_path:
-        conn_socket.send(index.encode())
-    elif req_ls[1] == "login":
-        conn_socket.send(login.encode())
-    """
+        continue
     
     conn_socket.close()
 server_socket.close()

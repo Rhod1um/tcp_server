@@ -1,205 +1,36 @@
-GET /login HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET /login HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET /login HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET / HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET / HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET /y HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET / HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET /login HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: same-origin
-Accept-Encoding: gzip, deflate
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Referer: http://localhost:12003/
-Sec-Fetch-Dest: document
-Accept-Language: en-US,en;q=0.9
-
-GET /login HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET /lo HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET / HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET / HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET / HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET /%% HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET / HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET / HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
-GET /?p=gyhk HTTP/1.1
-Host: localhost:12003
-Sec-Fetch-Site: none
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Sec-Fetch-Mode: navigate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15
-Accept-Language: en-US,en;q=0.9
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-
+127.0.0.1 - - [10/Sep/2024:17:01:17  +0100] "GET / HTTP/1.1" 200 1895
+127.0.0.1 - - [10/Sep/2024:17:02:30  +0100] "GET /login HTTP/1.1" 200 2298
+127.0.0.1 - - [10/Sep/2024:17:02:42  +0100] "GET /y HTTP/1.1" 404 1731
+127.0.0.1 - - [10/Sep/2024:17:02:48  +0100] "GET /index.html HTTfP/1.1" 405 86
+127.0.0.1 - - [10/Sep/2024:17:03:01  +0100] "GET / HTTP/1.1" 200 1895
+127.0.0.1 - - [10/Sep/2024:17:23:03  +0100] "GET / HTTP/1.1" 200 1895
+127.0.0.1 - - [10/Sep/2024:17:23:15  +0100] "GET /login HTTP/1.1" 200 2298
+127.0.0.1 - - [10/Sep/2024:17:23:15  +0100] "GET / HTTP/1.1" 200 1895
+127.0.0.1 - - [10/Sep/2024:17:24:07  +0100] "GET / HTTP/1.1" 200 1895
+127.0.0.1 - - [10/Sep/2024:17:24:38  +0100] "GET /y HTTP/1.1" 404 1731
+127.0.0.1 - - [10/Sep/2024:17:32:10  +0100] "GET /y HTTP/1.1" 404 1731
+127.0.0.1 - - [10/Sep/2024:17:33:12  +0100] "GET /login HTTP/1.1" 200 2297
+127.0.0.1 - - [10/Sep/2024:17:33:26  +0100] "GET /login HTTP/1.1" 200 2297
+127.0.0.1 - - [10/Sep/2024:17:33:31  +0100] "GET / HTTP/1.1" 200 1894
+127.0.0.1 - - [10/Sep/2024:17:33:37  +0100] "GET /login HTTP/1.1" 200 2297
+127.0.0.1 - - [10/Sep/2024:17:36:33  +0100] "GET / HTTP/1.1" 200 1894
+127.0.0.1 - - [10/Sep/2024:17:36:46  +0100] "GET /index.html HTTP/1.1" 404 1731
+127.0.0.1 - - [11/Sep/2024:20:42:00  +0100] "GET / HTTP/1.1" 200 1891
+127.0.0.1 - - [11/Sep/2024:20:46:47  +0100] "GET / HTTP/1.1" 200 1891
+127.0.0.1 - - [11/Sep/2024:20:46:52  +0100] "GET /login HTTP/1.1" 200 2294
+127.0.0.1 - - [11/Sep/2024:20:46:52  +0100] "GET /login HTTP/1.1" 200 2294
+127.0.0.1 - - [11/Sep/2024:20:47:15  +0100] "GET /login HTTP/1.1" 200 2294
+127.0.0.1 - - [11/Sep/2024:20:47:16  +0100] "GET / HTTP/1.1" 200 1891
+127.0.0.1 - - [11/Sep/2024:20:47:35  +0100] "GET /y HTTP/1.1" 404 1728
+127.0.0.1 - - [11/Sep/2024:20:47:35  +0100] "GET / HTTP/1.1" 200 1891
+127.0.0.1 - - [11/Sep/2024:20:47:39  +0100] "GET /h HTTP/1.1" 404 1728
+127.0.0.1 - - [11/Sep/2024:20:48:01  +0100] "GET /index.html HTTfP/1.1" 405 83
+127.0.0.1 - - [11/Sep/2024:20:50:08  +0100] "GET / HTTP/1.1" 200 1891
+127.0.0.1 - - [11/Sep/2024:20:51:09  +0100] "GET / HTTP/1.1" 200 1891
+127.0.0.1 - - [11/Sep/2024:20:51:17  +0100] "GET / HTTP/1.1" 200 1891
+127.0.0.1 - - [11/Sep/2024:20:51:18  +0100] "GET /favicon.ico HTTP/1.1" 404 1728
+127.0.0.1 - - [11/Sep/2024:20:51:36  +0100] "GET / HTTP/1.1" 200 1891
+127.0.0.1 - - [11/Sep/2024:20:54:06  +0100] "GET / HTTP/1.1" 200 1891
+127.0.0.1 - - [11/Sep/2024:20:54:39  +0100] "GET / HTTP/1.1" 200 1891
+127.0.0.1 - - [11/Sep/2024:20:54:39  +0100] "GET /favicon.ico HTTP/1.1" 404 1728
+127.0.0.1 - - [11/Sep/2024:20:55:48  +0100] "GET / HTTP/1.1" 200 1891

@@ -3,9 +3,10 @@
 from socket import *
 
 server_name="localhost"
-server_port = 12001
+server_port = 12002
 
-http_request = f"GET /index.html HTTP/1.1\r\n" \
+# for bad request:
+http_request = f"GET /index.html HTTfP/1.1\r\n" \
                f"Host: {server_name}\r\n" \
                f"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n" \
                f"Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7\r\n" \
